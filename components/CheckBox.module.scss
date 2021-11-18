@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  height: 24px;
+}
+
+.container input {
+  opacity: 0;
+}
+
+.checked {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.checked:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 6px;
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.container input[type="checkbox"]:checked + span {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.container input[type="checkbox"]:checked + span:after {
+  opacity: 1;
+}

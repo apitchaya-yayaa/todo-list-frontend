@@ -1,0 +1,44 @@
+@mixin borderStyled {
+  border-radius: 42px;
+}
+
+.container {
+  > * {
+    @include borderStyled;
+    background-color: #1890ff;
+  }
+}
+
+.confirmModalContainer {
+  > * {
+    @include borderStyled;
+  }
+}
+
+.input {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 30px;
+  &::placeholder {
+    color: white;
+  }
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.fullWidthButton {
+  background-color: white;
+  color: #414141;
+  font-size: 18px !important;
+  height: 50px !important;
+  width: 100%;
+}
+
+.cancelButton {
+  margin-left: 1rem;
+}
